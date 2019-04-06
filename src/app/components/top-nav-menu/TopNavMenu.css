@@ -1,0 +1,31 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+    box-shadow: 0px 4px rgba(0, 0, 0, .10);  
+    justify-content: center;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px; 
+    background: #ffffff;
+}
+.nav-list{
+    display: inline-flex;
+}
+
+.nav-list-item{
+    list-style-type: none;
+    margin-inline-end: 10em;
+}
+
+.nav-list-item-navLink{
+    cursor: pointer;
+    color: blue;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+.active{
+    cursor: initial;
+    color: gray;
+}

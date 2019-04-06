@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router'
 
-import Popular from './popular/Popular'
-import Search from './search/Search'
-import MyCollection from './my-collection/MyCollection'
+import Popular from './popular'
+import Search from './search'
+import MyCollection from './my-collection'
 
 const Router = () =>
   <Switch>

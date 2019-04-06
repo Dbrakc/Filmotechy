@@ -1,0 +1,38 @@
+.title{
+    width: 50%;
+    font-size: 1.3rem;
+    color: blue;
+}
+
+.favoritesIconWrapper{
+    display: flex;
+    width: 50%;
+    flex-direction: row-reverse;
+}
+
+.favoritesIcon{
+    height: 1.5em;
+    width: 1.5em;   
+}
+
+.propertiesContainer{
+    display: inline-flex; 
+    flex: 1;
+    align-items: center;
+}
+
+
+.genre{
+    width: 50%;
+    flex-direction: row;
+    margin-right: 1em;
+    text-align: start;
+}
+
+.year{
+    width: 50%;
+    flex-direction: row;
+    justify-self: end;
+    text-align: end;
+    
+}
