@@ -1,14 +1,17 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
 import myCollections from './../reducers/reducers'
-import saveState from './../local-storage/localStorage'
+import saveState from '../local-storage/saveState'
 
-const store = createStore(myCollections)
+const store = createStore(
+    myCollections,
+    applyMiddleware(thunk)
+)
 
 store.subscribe(() =>{
-    console.log(store.getState())
     saveState({
-      collections: store.getState() 
+      collections: store.getState()
     })
 })
 

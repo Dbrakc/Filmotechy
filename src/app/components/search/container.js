@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 
-import addToCollectionAction from '../../actions/actions';
+import addToCollectionAction from '../../actions/addToCollection';
 import Search from './view';
 
 const mapStateToProps = state => ({output: true})

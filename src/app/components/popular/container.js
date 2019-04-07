@@ -1,9 +1,11 @@
 import {connect} from 'react-redux'
 
-import addToCollectionAction from '../../actions/actions';
+import addToCollectionAction from '../../actions/addToCollection';
 import Popular from './view';
 
-const mapStateToProps = state => ({output: true})
+const mapStateToProps = state => ({
+    collection: state
+})
 
 const mapDispatchToProps = (dispatch, props) => (
     {

@@ -1,0 +1,3 @@
+const ADD_TO_COLLECTION = 'ADD_TO_COLLECTION';
+
+export default ADD_TO_COLLECTION

@@ -1,7 +1,8 @@
 import {connect} from 'react-redux'
 
-import MyCollection from './view';
+import Filmotechy from './view';
 import loadState from './../../local-storage/loadState';
+
 import fetchCollection from './../../actions/fetchCollection'
 
 const mapStateToProps = state => (
@@ -28,4 +29,4 @@ const mapDispatchToProps = (dispatch, props) =>{
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(MyCollection)
+)(Filmotechy)
