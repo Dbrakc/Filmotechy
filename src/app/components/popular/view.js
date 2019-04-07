@@ -1,10 +1,7 @@
 import React, {useEffect} from 'react';
 
-import './styles.css'
-
 import MovieList from '../movie-list/MovieList'
 import MovieResume from '../movie-resume'
-
 
 
 const Popular = props => {

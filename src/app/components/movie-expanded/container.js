@@ -1,6 +1,5 @@
 import {connect} from 'react-redux'
 
-
 import MovieExpanded from './view';
 import { fetchMovieById } from '../../actions/movie/movieById';
 

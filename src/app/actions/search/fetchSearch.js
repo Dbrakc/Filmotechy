@@ -1,13 +1,13 @@
 import{ FETCH_SEARCH_REQUEST, FETCH_SEARCH_SUCCESS} from './../../action-types/search/fetchSearch'
 
 
-
 export const fetchSearchRequestAction = searchQuery => ({
     type: FETCH_SEARCH_REQUEST,
     payload:{
         search: searchQuery
     }
 });
+
 export const fetchSearchSuccessAction = (searchQuery,json) => ({
     type: FETCH_SEARCH_SUCCESS,
     payload: {

@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch, props) => (
             dispatch(addToCollectionAction(item))
             alert('To collection added')
         },
+        
         fetchSearch: (query) => dispatch(fetchSearch(query))
     }
 ) 

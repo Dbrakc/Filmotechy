@@ -51,7 +51,12 @@ const searchs = (state = [], action ) =>{
         case FETCH_SEARCH_REQUEST:
             return {...state, loading:true}
         case FETCH_SEARCH_SUCCESS:
-            return {...state, loading:false, data: action.payload.popular, query: action.payload.query}
+            return {
+                ...state, 
+                loading:false, 
+                data: action.payload.popular, 
+                query: action.payload.query
+            }
         default:
             return state;
     }
@@ -70,7 +75,6 @@ const  movie = (state = [], action ) =>{
 }
 
 
-
 const rootReducer = combineReducers(
     {
         myCollections, 
@@ -79,7 +83,6 @@ const rootReducer = combineReducers(
         movie
     }
 )
-
 
 
 const isAllreadyNotSaved= (state, action) => 

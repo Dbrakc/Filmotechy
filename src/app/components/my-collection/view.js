@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react';
 
-
 import MovieList from './../movie-list/MovieList'
 import MovieResume from './../movie-resume'
 

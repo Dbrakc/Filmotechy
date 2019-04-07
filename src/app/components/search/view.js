@@ -29,13 +29,11 @@ const Search = props => {
                             actionClick={props.addToCollection}
                         /> 
                     }
-                /> 
-                
+                   />                
             }
         </>
     )
 }
-
 
 
 export default Search

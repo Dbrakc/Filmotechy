@@ -18,6 +18,7 @@ const MovieResume = (props) =>
                 alt = 'item promotional poster'
             />
         </Link>
+
         <div className= 'propertiesContainer'>
             <h4 className = 'title'>{props.item.title}</h4>
             <div className = 'favoritesIconWrapper'>
@@ -33,6 +34,7 @@ const MovieResume = (props) =>
                 />
             </div>
         </div>
+
         <div className= 'propertiesContainer'>
             <div className = 'vote_count'>
                 <img 
@@ -53,6 +55,7 @@ const MovieResume = (props) =>
             </div>
             <p className = 'year'>{props.item.release_date}</p> 
         </div>
+        
     </>
 
 export default MovieResume

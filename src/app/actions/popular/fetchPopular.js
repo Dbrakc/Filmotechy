@@ -1,10 +1,9 @@
 import{ FETCH_POPULAR_REQUEST, FETCH_POPULAR_SUCCESS} from './../../action-types/popular/fetchPopular'
 
-
-
 export const fetchPopularRequestAction = () => ({
     type: FETCH_POPULAR_REQUEST,
 });
+
 export const fetchPopularSuccessAction = json => ({
     type: FETCH_POPULAR_SUCCESS,
     payload: {

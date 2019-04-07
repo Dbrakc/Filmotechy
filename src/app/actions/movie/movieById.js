@@ -1,10 +1,10 @@
 import{ FETCH_MOVIE_BY_ID_REQUEST, FETCH_MOVIE_BY_ID_SUCCESS} from './../../action-types/movie/movieById'
 
 
-
 export const fetchMovieByIdRequestAction = () => ({
     type: FETCH_MOVIE_BY_ID_REQUEST,
 });
+
 export const fetchMovieByIdSuccessAction = json => ({
     type: FETCH_MOVIE_BY_ID_SUCCESS,
     payload: {
