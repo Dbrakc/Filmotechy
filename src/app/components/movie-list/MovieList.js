@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './MovieList.css'
-∫
+
 const MovieList = props =>
     <ul className= 'movies'>
         {
