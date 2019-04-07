@@ -14,7 +14,7 @@ const MovieExpanded = props => {
                 alt = 'item promotional poster'
             />
             <div className='textContainer'>
-                <h2>{props.movie.data && props.movie.data.title}</h2>
+                <h2 className = 'title'>{props.movie.data && props.movie.data.title}</h2>
                 <p>{props.movie.data && props.movie.data.overview}</p>  
             </div>
         </div>
