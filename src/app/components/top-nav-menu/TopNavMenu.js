@@ -9,6 +9,7 @@ import {routes} from '../Router'
 const TopNavMenu = props =>
     <nav className = 'nav'>
         <ul className = 'nav-list'>
+            
             <li className = 'nav-list-item' >
                 <NavLink
                     className = 'nav-list-item-navLink'
@@ -17,6 +18,7 @@ const TopNavMenu = props =>
                     Popular    
                 </NavLink>
             </li>
+            
             <li className = 'nav-list-item'>
                 <NavLink
                     className = 'nav-list-item-navLink'
@@ -25,6 +27,7 @@ const TopNavMenu = props =>
                     Search    
                 </NavLink>
             </li>
+            
             <li className = 'nav-list-item'>
                 <NavLink
                     className = 'nav-list-item-navLink'
@@ -33,6 +36,7 @@ const TopNavMenu = props =>
                     My Collection    
                 </NavLink>
             </li>
+            
         </ul>
     </nav>
 

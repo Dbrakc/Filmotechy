@@ -7,7 +7,6 @@ import { fetchPopular } from '../../actions/popular/fetchPopular';
 const mapStateToProps = state => ({
     populars: state ? state.populars: [],
     myCollections: state ?  state.myCollections : [],
-
 })
 
 const mapDispatchToProps = (dispatch, props) => (
@@ -16,6 +15,7 @@ const mapDispatchToProps = (dispatch, props) => (
             dispatch(addToCollectionAction(item))
             alert('To collection added')
         },
+
         fetchPopular: () => dispatch(fetchPopular())
     }
 ) 

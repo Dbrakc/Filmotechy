@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch, props) =>{
             dispatch(deleteFromCollectionAction(movie.id))
             alert('From collection deleted')
         },
+
         fetchCollection: () =>  dispatch(
            fetchCollection(
                 loadState()
@@ -26,10 +27,10 @@ const mapDispatchToProps = (dispatch, props) =>{
                 : []
             )
         ),
+        
         voteMovie: (movie) =>{
             dispatch(voteMovie(movie.id))
-        }
-       
+        }   
     }
 ) 
 }
