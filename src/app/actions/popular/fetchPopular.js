@@ -1,4 +1,5 @@
 import{ FETCH_POPULAR_REQUEST, FETCH_POPULAR_SUCCESS} from './../../action-types/popular/fetchPopular'
+import API_KEY from './../../constants'
 
 export const fetchPopularRequestAction = () => ({
     type: FETCH_POPULAR_REQUEST,
@@ -13,7 +14,7 @@ export const fetchPopularSuccessAction = json => ({
 
 export const fetchPopular =  () =>  dispatch  => {
     dispatch(fetchPopularRequestAction())
-    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=93aea0c77bc168d8bbce3918cefefa45`)
+    return fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`)
     .then(
          response => response.json(),
          error => console.log('An error occurred.', error),

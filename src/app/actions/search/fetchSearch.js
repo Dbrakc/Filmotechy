@@ -1,4 +1,5 @@
 import{ FETCH_SEARCH_REQUEST, FETCH_SEARCH_SUCCESS} from './../../action-types/search/fetchSearch'
+import API_KEY from './../../constants'
 
 
 export const fetchSearchRequestAction = searchQuery => ({
@@ -17,7 +18,7 @@ export const fetchSearchSuccessAction = (searchQuery,json) => ({
 
 export const fetchSearch =  (searchQuery) =>  (dispatch)  => {
     dispatch(fetchSearchRequestAction())  
-    return fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=93aea0c77bc168d8bbce3918cefefa45`)
+    return fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=${API_KEY}`)
     .then(
          response => response.json(),
          error => console.log('An error occurred.', error),
