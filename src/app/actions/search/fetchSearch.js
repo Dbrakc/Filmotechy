@@ -16,7 +16,6 @@ export const fetchSearchSuccessAction = (searchQuery,json) => ({
 });
 
 export const fetchSearch =  (searchQuery) =>  (dispatch)  => {
-    console.log(searchQuery)
     dispatch(fetchSearchRequestAction())  
     return fetch(`https://api.themoviedb.org/3/search/movie?query=${searchQuery}&api_key=93aea0c77bc168d8bbce3918cefefa45`)
     .then(

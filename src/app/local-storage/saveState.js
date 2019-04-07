@@ -1,4 +1,3 @@
-import { stat } from "fs";
 
   const saveState = (state) => {
     try {

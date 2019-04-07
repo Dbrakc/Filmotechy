@@ -20,7 +20,6 @@ export const fetchMovieById =  (id) =>  dispatch  => {
          error => console.log('An error occurred.', error),
      )
       .then((json) => {
-        console.log(json)
          dispatch(fetchMovieByIdSuccessAction(json));
       },
      );

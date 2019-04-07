@@ -20,7 +20,6 @@ const myCollections = (state = [], action) =>{
         case FETCH_COLLECTION:
             return [...action.payload.collection]
         case VOTE_MOVIE:
-            console.log('here')
             return state.map(movie => 
                 movie.id!==action.payload.id
                 ?movie
@@ -64,7 +63,6 @@ const  movie = (state = [], action ) =>{
         case FETCH_MOVIE_BY_ID_REQUEST:
             return {...state, loading:true}
         case FETCH_MOVIE_BY_ID_SUCCESS:
-            console.log(action.payload)
             return {...state, loading:false, data: action.payload.movie}
         default:
             return state;

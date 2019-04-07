@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import addToCollectionAction from '../../actions/my-collection/addToCollection';
 import Search from './view';
 import { fetchSearch } from '../../actions/search/fetchSearch';
-import MyCollection from '../my-collection/view';
 
 const mapStateToProps = state => ({
     searchs: state ? state.searchs : [],
