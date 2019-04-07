@@ -1,9 +1,13 @@
-import  ADD_TO_COLLECTION from './../action-types/addToCollection'
-import  DELETE_FROM_COLLECTION from './../action-types/deleteFromCollection'
-import FETCH_COLLECTION from './../action-types/FetchCollection'
+import { combineReducers, bindActionCreators } from 'redux';
 
-const myCollections = (state = [], action) =>{
-    
+import  ADD_TO_COLLECTION from '../action-types/my-collection/addToCollection'
+import  DELETE_FROM_COLLECTION from '../action-types/my-collection/deleteFromCollection'
+import FETCH_COLLECTION from '../action-types/my-collection/FetchCollection'
+import { FETCH_POPULAR_REQUEST, FETCH_POPULAR_SUCCESS} from '../action-types/popular/fetchPopular'
+import { FETCH_SEARCH_REQUEST, FETCH_SEARCH_SUCCESS} from '../action-types/search/fetchSearch'
+
+
+const myCollections = (state = [], action) =>{    
     switch (action.type){
         case ADD_TO_COLLECTION:
         console.log(isAllreadyNotSaved(state,action))
@@ -19,11 +23,43 @@ const myCollections = (state = [], action) =>{
     }
 }
 
-function isAllreadyNotSaved(state, action) {
-    return state.length === 0 ||
-        state.filter(movie => movie.id === action.payload.movie.id).length === 0;
+const populars = (state = [], action ) =>{
+    switch(action.type){
+        case FETCH_POPULAR_REQUEST:
+            return {...state, loading:true}
+        case FETCH_POPULAR_SUCCESS:
+            return {...state, loading:false, data: action.payload.popular}
+        default:
+            return state;
+    }
 }
 
-export default myCollections;
+const searchs = (state = [], action ) =>{
+    switch(action.type){
+        case FETCH_SEARCH_REQUEST:
+            return {...state, loading:true}
+        case FETCH_SEARCH_SUCCESS:
+            return {...state, loading:false, data: action.payload.popular, query: action.payload.query}
+        default:
+            return state;
+    }
+}
+
+
+const rootReducer = combineReducers(
+    {
+        myCollections, 
+        populars,
+        searchs
+    }
+)
+
+
+
+const isAllreadyNotSaved= (state, action) => 
+state.length === 0 ||
+        state.filter(movie => movie.id === action.payload.movie.id).length === 0;
+
+export default rootReducer;
 
 

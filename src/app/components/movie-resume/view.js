@@ -5,7 +5,8 @@ import './styles.css'
 const MovieResume = (props) =>
     <>
         <img
-            src= {props.item.image}
+            className = 'posterImage'
+            src= {`https://image.tmdb.org/t/p/w500${props.item.poster_path}`}
             alt = 'item promotional poster'
         />
         <div className= 'propertiesContainer'>
@@ -20,8 +21,8 @@ const MovieResume = (props) =>
             </div>
         </div>
         <div className= 'propertiesContainer'>
-            <p className = 'genre' >{props.item.genre}</p>
-            <p className = 'year'>{props.item.year}</p> 
+            <p className = 'vote_count' >{props.item.vote_count}</p>
+            <p className = 'year'>{props.item.release_date}</p> 
         </div>
     </>
 

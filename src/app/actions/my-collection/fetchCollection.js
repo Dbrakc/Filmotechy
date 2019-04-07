@@ -1,4 +1,4 @@
-import FETCH_COLLECTION from './../action-types/FetchCollection'
+import FETCH_COLLECTION from '../../action-types/my-collection/FetchCollection'
 
 const fetchCollection = (collection) => ({
   type: FETCH_COLLECTION,

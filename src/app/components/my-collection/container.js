@@ -2,8 +2,8 @@ import {connect} from 'react-redux'
 
 import MyCollection from './view';
 import loadState from './../../local-storage/loadState';
-import fetchCollection from './../../actions/fetchCollection'
-import deleteFromCollectionAction from './../../actions/deleteFromCollection'
+import fetchCollection from '../../actions/my-collection/fetchCollection'
+import deleteFromCollectionAction from '../../actions/my-collection/deleteFromCollection'
 
 const mapStateToProps = state => (
     {

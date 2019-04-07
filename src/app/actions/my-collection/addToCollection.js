@@ -1,4 +1,4 @@
-import ADD_TO_COLLECTION from './../action-types/addToCollection'
+import ADD_TO_COLLECTION from '../../action-types/my-collection/addToCollection'
 
 const addToCollectionAction = (movie) => (
     {

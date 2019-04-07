@@ -4,11 +4,11 @@ import MovieList from './../movie-list/MovieList'
 import MovieResume from './../movie-resume'
 
 const MyCollection = props => {
-    useEffect(() => { props.fetchCollection() } )
+    useEffect(() => {props.fetchCollection()}, [] )
     return (
         <>
             <MovieList 
-                movies = {props.collection} 
+                movies = {props.collection.myCollections} 
                 render = { (movie)=> 
                     <MovieResume 
                         item= {movie} 

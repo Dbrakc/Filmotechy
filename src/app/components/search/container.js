@@ -1,10 +1,14 @@
 import {connect} from 'react-redux'
 
-import addToCollectionAction from '../../actions/addToCollection';
+import addToCollectionAction from '../../actions/my-collection/addToCollection';
 import Search from './view';
+import { fetchSearch } from '../../actions/search/fetchSearch';
+import MyCollection from '../my-collection/view';
 
 const mapStateToProps = state => ({
-    collection: state
+    searchs: state ? state.searchs : [],
+    myCollections: state ?  state.myCollections : [],
+    
 })
 
 const mapDispatchToProps = (dispatch, props) => (
@@ -12,7 +16,8 @@ const mapDispatchToProps = (dispatch, props) => (
         addToCollection: (item) =>{ 
             dispatch(addToCollectionAction(item))
             alert('To collection added')
-        }
+        },
+        fetchSearch: (query) => dispatch(fetchSearch(query))
     }
 ) 
 

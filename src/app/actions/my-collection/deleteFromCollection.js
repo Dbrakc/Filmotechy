@@ -1,4 +1,4 @@
-import DELETE_FROM_COLLECTION from './../action-types/deleteFromCollection'
+import DELETE_FROM_COLLECTION from '../../action-types/my-collection/deleteFromCollection'
 
 const deleteFromCollectionAction = (id) => (
     {
