@@ -14,7 +14,7 @@ const MovieResume = (props) =>
                 <img 
                     className = 'favoritesIcon'
                     onClick = {() => props.actionClick(props.item)}
-                    src="https://img.icons8.com/ultraviolet/40/000000/like.png"
+                    src= {props.actionIcon?props.actionIcon:"https://img.icons8.com/ultraviolet/40/000000/like.png"}
                     alt = 'Add to your collection'
                 />
             </div>

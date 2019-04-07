@@ -12,7 +12,8 @@ const MyCollection = props => {
                 render = { (movie)=> 
                     <MovieResume 
                         item= {movie} 
-                        actionClick={props.addToCollection}
+                        actionIcon= 'https://img.icons8.com/ultraviolet/40/000000/delete.png'
+                        actionClick={props.deleteFromCollection}
                     /> 
             }
             /> 

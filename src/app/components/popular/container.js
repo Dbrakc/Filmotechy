@@ -9,7 +9,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, props) => (
     {
-        addToCollection: (item) => dispatch(addToCollectionAction(item))
+        addToCollection: (item) =>{ 
+            dispatch(addToCollectionAction(item))
+            alert('To collection added')
+        }
     }
 ) 
 

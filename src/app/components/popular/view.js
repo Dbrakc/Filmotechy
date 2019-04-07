@@ -24,7 +24,7 @@ const Popular = props =>
             movies = {MOVIES} 
             render = { (movie)=> 
                 <MovieResume 
-                    item= {movie} 
+                    item= {movie}
                     actionClick={props.addToCollection}
                 /> 
             }
